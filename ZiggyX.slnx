@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ZiggyX/ZiggyX.vcxproj" Id="4743653d-fdf8-4c61-bf80-12c6341d9fa9" />
+</Solution>
