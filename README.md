@@ -2,7 +2,7 @@
 
 
 
-\#Installing GLFW
+\# Installing GLFW
 
 
 
@@ -61,7 +61,63 @@
 1. Copy each function in the output and find the library associated with it on google and add them to Linker -> Input -> Additional Dependencies
 2. Additional Dependencies should eventually contain
 
-&nbsp;	
+ 
 
-&nbsp;	glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib
+ 	glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib
+
+
+
+\# Install GLEW
+
+
+
+\## Download glew online
+
+
+
+1. Go to the Solution Directory
+2. 2\. Add the file to Dependencies
+
+
+
+\## Setting up the include directory
+
+
+
+1. Open the properties on your project
+2. Go to C/C++ -> General -> Additional Include Directories
+3. Set to $(SolutionDir)Dependencies\\GLEW\\include\\GL
+
+
+
+\## Set up library directory
+
+
+
+1. Go to Linker -> General -> Additional Library Directories
+2. Set to $(SolutionDir)Dependencies\\GLEW\\lib\\Release\\x64
+
+
+
+\## Link the static library
+
+
+
+1. Go to Linker -> Input -> Additional Dependencies
+2. Add glew32s.lib
+
+
+
+* glew32s.lib is the static library
+
+
+
+\## Set the preprocessor directive to use GLEW\_STATIC
+
+
+
+1. Go to C/C++ Preprocessor -> Preprocessor Definitions
+2. Add GLEW\_STATIC
+
+
 
