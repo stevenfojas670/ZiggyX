@@ -2,6 +2,50 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+struct ShaderProgramSource
+{
+	std::string VertexSource;
+	std::string FragmentSource;
+};
+
+static ShaderProgramSource ParseShader(const std::string& filepath)
+{
+	std::ifstream stream(filepath);
+
+	enum class ShaderType {
+		NONE = -1, VERTEX = 0, FRAGMENT = 1
+	};
+
+	std::string line;
+	std::stringstream ss[2];
+	ShaderType type = ShaderType::NONE;
+	while (getline(stream, line))
+	{
+		if (line.find("#shader") != std::string::npos)
+		{
+			if (line.find("vertex") != std::string::npos)
+			{
+				// Set mode to vertex
+				type = ShaderType::VERTEX;
+			}
+			else if (line.find("fragment") != std::string::npos)
+			{
+				// Set mode to fragment
+				type = ShaderType::FRAGMENT;
+			}
+		}
+		else
+		{
+			ss[(int)type] << line << '\n';
+		}
+	}
+
+	return { ss[0].str(), ss[1].str() };
+}
 
 static unsigned int CompileShader(unsigned int type, const std::string& source)
 {
@@ -91,6 +135,10 @@ int main(void)
 	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
 	std::cout << "GLEW Version: " << glewGetString(GLEW_VERSION) << std::endl;
 
+	int nrAttributes;
+	glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+	std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
+
 	float vertices[] = {
 		-0.5f, -0.5, 0.0f,
 		0.5f, -0.5f, 0.0f,
@@ -115,25 +163,15 @@ int main(void)
 	// Enable vertex attributes
 	glEnableVertexAttribArray(0);
 
-	const char* vertexShaderSource = "#version 330 core\n"
-		"layout (location = 0) in vec3 aPos;\n"
-		"void main()\n"
-		"{\n"
-		"	gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-		"}\0";
+	ShaderProgramSource source = ParseShader("res/shaders/Basic.shader");
 
-	const char* fragmentShaderSource = "#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"void main()\n"
-		"{\n"
-		"	FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-		"}\0";
+	std::cout << "Vertex\n" << source.VertexSource << std::endl;
+	std::cout << "Fragment\n" << source.FragmentSource << std::endl;
 
-	unsigned int shader = CreateShader(vertexShaderSource, fragmentShaderSource);
+	unsigned int shader = CreateShader(source.VertexSource, source.FragmentSource);
 
 	// use the shader program to finally render the shaders
 	glUseProgram(shader);
-
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -151,6 +189,7 @@ int main(void)
 		glfwPollEvents();
 	}
 
+	glDeleteProgram(shader);
 	glfwTerminate();
 	return 0;
 }
