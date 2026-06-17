@@ -140,9 +140,13 @@ int main(void)
 	std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
 
 	float vertices[] = {
-		-0.5f, -0.5, 0.0f,
-		0.5f, -0.5f, 0.0f,
-		0.0f, 0.5f, 0.0f
+		-0.5f, -0.5f,
+		0.5f, -0.5f,
+		0.5f, 0.5f,
+
+		0.5f, 0.5f,
+		-0.5f, 0.5f,
+		-0.5f, -0.5f
 	};
 
 	// Create a VBO
@@ -158,7 +162,7 @@ int main(void)
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 	// Specify what OpenGL should do with our vertex data
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 
 	// Enable vertex attributes
 	glEnableVertexAttribArray(0);
@@ -180,7 +184,7 @@ int main(void)
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// Draw call to draw the vertex attributes in memory
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
