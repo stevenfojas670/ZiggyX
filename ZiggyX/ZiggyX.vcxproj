@@ -139,77 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Physics\AABB.cpp" />
-    <ClCompile Include="src\Physics\Body.cpp" />
-    <ClCompile Include="src\Physics\BroadPhase.cpp" />
-    <ClCompile Include="src\Physics\CircleShape.cpp" />
-    <ClCompile Include="src\Physics\Collision.cpp" />
-    <ClCompile Include="src\Physics\Constraint.cpp" />
-    <ClCompile Include="src\Physics\Contact.cpp" />
-    <ClCompile Include="src\Physics\Joint.cpp" />
-    <ClCompile Include="src\Physics\Manifold.cpp" />
-    <ClCompile Include="src\Physics\NarrowPhase.cpp" />
-    <ClCompile Include="src\Physics\PolygonShape.cpp" />
-    <ClCompile Include="src\Physics\Shape.cpp" />
-    <ClCompile Include="src\Physics\Solver.cpp" />
-    <ClCompile Include="src\Physics\World.cpp" />
-    <ClCompile Include="src\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\Renderer\Camera.cpp" />
-    <ClCompile Include="src\Renderer\DebugDraw.cpp" />
-    <ClCompile Include="src\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Renderer\Renderer2D.cpp" />
-    <ClCompile Include="src\Renderer\Shader.cpp" />
-    <ClCompile Include="src\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\Sandbox\DemoScenes\CollisionScene.cpp" />
-    <ClCompile Include="src\Sandbox\DemoScenes\ConstraintsScene.cpp" />
-    <ClCompile Include="src\Sandbox\DemoScenes\FallingBoxesScene.cpp" />
-    <ClCompile Include="src\Sandbox\SandboxLayer.cpp" />
-    <ClCompile Include="src\Scene\Scene.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Core\Application.h" />
-    <ClInclude Include="src\Core\Log.h" />
-    <ClInclude Include="src\Core\TimeStep.h" />
-    <ClInclude Include="src\Math\Mat2.h" />
-    <ClInclude Include="src\Math\Transform.h" />
-    <ClInclude Include="src\Math\Vec2.h" />
-    <ClInclude Include="src\Math\Vec3.h" />
-    <ClInclude Include="src\Physics\AABB.h" />
-    <ClInclude Include="src\Physics\Body.h" />
-    <ClInclude Include="src\Physics\BodyDef.h" />
-    <ClInclude Include="src\Physics\BroadPhase.h" />
-    <ClInclude Include="src\Physics\CircleShape.h" />
-    <ClInclude Include="src\Physics\Collision.h" />
-    <ClInclude Include="src\Physics\Constraint.h" />
-    <ClInclude Include="src\Physics\Contact.h" />
-    <ClInclude Include="src\Physics\Joint.h" />
-    <ClInclude Include="src\Physics\Manifold.h" />
-    <ClInclude Include="src\Physics\NarrowPhase.h" />
-    <ClInclude Include="src\Physics\PolygonShape.h" />
-    <ClInclude Include="src\Physics\Shape.h" />
-    <ClInclude Include="src\Physics\Solver.h" />
-    <ClInclude Include="src\Physics\World.h" />
-    <ClInclude Include="src\Renderer\Buffer.h" />
-    <ClInclude Include="src\Renderer\Camera.h" />
-    <ClInclude Include="src\Renderer\DebugDraw.h" />
-    <ClInclude Include="src\Renderer\Renderer.h" />
-    <ClInclude Include="src\Renderer\Renderer2D.h" />
-    <ClInclude Include="src\Renderer\Shader.h" />
-    <ClInclude Include="src\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Sandbox\DemoScenes\CollisionScene.h" />
-    <ClInclude Include="src\Sandbox\DemoScenes\ConstraintsScene.h" />
-    <ClInclude Include="src\Sandbox\DemoScenes\FallingBoxesScene.h" />
-    <ClInclude Include="src\Sandbox\SandboxLayer.h" />
-    <ClInclude Include="src\Scene\Components.h" />
-    <ClInclude Include="src\Scene\Entity.h" />
-    <ClInclude Include="src\Scene\Scene.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\shaders\Basic.shader" />
-    <None Include="res\shaders\DebugLine.shader" />
-    <None Include="res\shaders\FlatColor.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
