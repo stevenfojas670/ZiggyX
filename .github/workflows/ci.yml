@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    env:
+      CONFIGURATION: Debug
+      PLATFORM: x64
+      # Primary build target. If a runner's MSBuild cannot parse the .slnx
+      # solution format, change this to: ZiggyX/ZiggyX.vcxproj
+      SOLUTION: ZiggyX.slnx
+
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build
+        run: msbuild ${{ env.SOLUTION }} /m /p:Configuration=${{ env.CONFIGURATION }} /p:Platform=${{ env.PLATFORM }}
