@@ -31,23 +31,6 @@ Windows 10 SDK).
 2. Open `ZiggyX.slnx` in Visual Studio 2022.
 3. Select the **Debug | x64** configuration and build (Ctrl+Shift+B), then run (F5).
 
-## Repository layout
-
-```
-ZiggyX/
-├── ZiggyX/
-│   ├── src/                     # Engine + entry-point source
-│   │   └── ZiggyX/
-│   │       ├── Core/            # Platform-independent core (Base, Log, Application, ...)
-│   │       └── Events/          # Event system
-│   ├── ZiggyX.vcxproj           # MSBuild project
-│   └── ZiggyX.vcxproj.filters
-├── ThirdParty/                  # Dependencies (submodules / vendored) — added per milestone
-├── ZiggyX.slnx                  # Solution
-├── ROADMAP.md                   # Milestones M0–M7 and dates
-└── DEPENDENCIES.md              # Dependency strategy
-```
-
 ## Status & roadmap
 
 ZiggyX is in early development. The plan runs from **M0 (Foundations & CI/CD)** through **M7 (Game AI)** — see
