@@ -35,5 +35,7 @@ namespace ZiggyX
 		{
 
 		}
+	private:
+		Event& m_Event;
 	};
 }

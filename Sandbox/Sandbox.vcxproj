@@ -143,9 +143,6 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ZiggyX\ZiggyX.vcxproj">
       <Project>{4743653d-fdf8-4c61-bf80-12c6341d9fa9}</Project>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
