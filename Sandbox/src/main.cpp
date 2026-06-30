@@ -1,32 +1,18 @@
 #include <iostream>
+#include "ZiggyX.h"
 
-/*
-* Initialize systems via pointers
-* Develop an event based architecture to read events and update state
-*
-* Systems:
-* Event
-* User Input
-* Physics
-* Rendering
-*
-* MVP:
-* Event
-* User Input
-* Physics
-*/
-
-#include "ZiggyX/Core/Base.h"
+class Sandbox : public ZiggyX::Application
+{
+public:
+	Sandbox();
+	~Sandbox();
+};
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
-int CALLBACK WinMain(
-	HINSTANCE hInstance,
-	HINSTANCE hPrevInstance,
-	LPSTR lpCmdLine,
-	int nCmdShow
-)
+int main()
 {
+	HINSTANCE hInstance = GetModuleHandle(nullptr);
 	const wchar_t* pClassName = L"ZiggyX";
 	const wchar_t* pWindowName = L"THE ZIGGY ENGINE";
 
@@ -77,7 +63,7 @@ int CALLBACK WinMain(
 	}
 	else
 	{
-		return msg.wParam;
+		return static_cast<int>(msg.wParam);
 	}
 
 	return 0;
