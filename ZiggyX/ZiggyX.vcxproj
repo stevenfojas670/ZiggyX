@@ -95,6 +95,7 @@
     <ClInclude Include="src\ZiggyX\Core\Application.h" />
     <ClInclude Include="src\ZiggyX\Core\Base.h" />
     <ClInclude Include="src\ZiggyX\Core\Core.h" />
+    <ClInclude Include="src\ZiggyX\Core\EntryPoint.h" />
     <ClInclude Include="src\ZiggyX\Core\KeyCodes.h" />
     <ClInclude Include="src\ZiggyX\Core\Layer.h" />
     <ClInclude Include="src\ZiggyX\Core\Log.h" />
@@ -102,6 +103,7 @@
     <ClInclude Include="src\ZiggyX\Events\Event.h" />
     <ClInclude Include="src\ZiggyX\Events\EventManager.h" />
     <ClInclude Include="src\ZiggyX\Events\KeyEvent.h" />
+    <ClInclude Include="src\ZiggyX\ZiggyX.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -66,9 +66,9 @@
       <AdditionalDependencies>
       </AdditionalDependencies>
     </Link>
-	  <PostBuildEvent>
-		  <Command>xcopy /Y /D "$(SolutionDir)bin\$(Configuration)-$(Platform)\ZiggyX\ZiggyX.dll" "$(OutDir)" &amp;&amp; xcopy /Y "$(SolutionDir)Dependencies\SDL3-3.4.10\lib\x64\SDL3.dll" "$(OutDir)"</Command>
-	  </PostBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /D "$(SolutionDir)bin\$(Configuration)-$(Platform)\ZiggyX\ZiggyX.dll" "$(OutDir)" &amp;&amp; xcopy /Y "$(SolutionDir)Dependencies\SDL3-3.4.10\lib\x64\SDL3.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Release|x64'">
     <ClCompile>
@@ -87,15 +87,12 @@
       <AdditionalDependencies>
       </AdditionalDependencies>
     </Link>
-	  <PostBuildEvent>
-		  <Command>xcopy /Y /D "$(SolutionDir)bin\$(Configuration)-$(Platform)\ZiggyX\ZiggyX.dll" "$(OutDir)" &amp;&amp; xcopy /Y "$(SolutionDir)Dependencies\SDL3-3.4.10\lib\x64\SDL3.dll" "$(OutDir)"</Command>
-	  </PostBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /D "$(SolutionDir)bin\$(Configuration)-$(Platform)\ZiggyX\ZiggyX.dll" "$(OutDir)" &amp;&amp; xcopy /Y "$(SolutionDir)Dependencies\SDL3-3.4.10\lib\x64\SDL3.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Sandbox.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\ZiggyX.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZiggyX\ZiggyX.vcxproj">

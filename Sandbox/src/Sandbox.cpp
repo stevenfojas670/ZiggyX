@@ -1,4 +1,4 @@
-#include "ZiggyX.h"
+#include <ZiggyX/ZiggyX.h>
 
 class Sandbox : public ZiggyX::Application
 {
@@ -7,11 +7,7 @@ public:
 	~Sandbox() {}
 };
 
-int main()
+ZiggyX::Application* ZiggyX::CreateApplication()
 {
-	Sandbox* sandbox = new Sandbox();
-
-	sandbox->Run();
-
-	return 0;
+	return new Sandbox();
 }

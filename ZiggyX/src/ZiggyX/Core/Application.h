@@ -13,4 +13,6 @@ namespace ZiggyX
 		void Run();
 		void Stop();
 	};
+
+	Application* CreateApplication();
 }
