@@ -23,11 +23,13 @@ namespace ZiggyX
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 
-		Window(const WindowSpecification& specification = WindowSpecification());
+		Window(const WindowSpecification& specs = WindowSpecification());
 		virtual ~Window();
-		void Create();
-		void Destroy();
-		void Update();
+
+		virtual	void OnUpdate() = 0;
+
+		virtual uint32_t GetWidth() const = 0;
+		virtual uint32_t GetHeight() const = 0;
 
 	private:
 		WindowSpecification m_Specification;

@@ -21,7 +21,7 @@
     <ClCompile Include="src\ZiggyX\Core\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ZiggyX\main.cpp">
+    <ClCompile Include="src\Platform\WindowsWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,19 +44,19 @@
     <ClInclude Include="src\ZiggyX\Core\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ZiggyX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\ZiggyX\Core\Base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ZiggyX\Core\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\ZiggyX\Core\Layer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\ZiggyX\Core\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\WindowsWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ZiggyX\Core\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

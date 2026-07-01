@@ -16,4 +16,9 @@ namespace ZiggyX
 	{
 		while (true);
 	}
+
+	void Application::Stop()
+	{
+		// Trigger all system shutdowns
+	}
 }

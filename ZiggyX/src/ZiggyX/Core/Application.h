@@ -1,12 +1,14 @@
 #pragma once
 
+#include "Core.h"
+
 namespace ZiggyX
 {
-	class Application
+	class ZX_API Application
 	{
 	public:
 		Application();
-		virtual ~Application() = 0;
+		virtual ~Application();
 
 		void Run();
 		void Stop();
