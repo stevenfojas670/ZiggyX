@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX\\MouseCodes.obj",
+            "outputs": [
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX\\MouseCodes.h_EC45AC136973CED2.ifc.dt.module.json",
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX\\MouseCodes.h_EC45AC136973CED2.ifc.dt.d.json",
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX\\MouseCodes.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\Bing\\source\\repos\\ZiggyX\\ZiggyX\\src\\ZiggyX\\Core\\MouseCodes.h",
+                    "source-path": "c:\\users\\bing\\source\\repos\\ziggyx\\ziggyx\\src\\ziggyx\\core\\mousecodes.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

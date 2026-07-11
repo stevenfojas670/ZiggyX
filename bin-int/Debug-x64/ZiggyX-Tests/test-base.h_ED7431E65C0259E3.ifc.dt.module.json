@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX-Tests\\test-base.obj",
+            "outputs": [
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX-Tests\\test-base.h_ED7431E65C0259E3.ifc.dt.module.json",
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX-Tests\\test-base.h_ED7431E65C0259E3.ifc.dt.d.json",
+                "C:\\Users\\Bing\\source\\repos\\ZiggyX\\bin-int\\Debug-x64\\ZiggyX-Tests\\test-base.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\Bing\\source\\repos\\ZiggyX\\ZiggyX-Tests\\tests\\test-base.h",
+                    "source-path": "c:\\users\\bing\\source\\repos\\ziggyx\\ziggyx-tests\\tests\\test-base.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
