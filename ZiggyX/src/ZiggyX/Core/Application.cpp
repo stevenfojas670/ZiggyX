@@ -2,9 +2,13 @@
 
 namespace ZiggyX
 {
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application()
 	{
-
+		// Initialize the window
+		// Make this customizable later
+		m_Window = std::make_unique<Window>();
 	}
 
 	Application::~Application()
@@ -12,12 +16,16 @@ namespace ZiggyX
 
 	}
 
-	void Application::Run()
+	void Application::Start()
 	{
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+
+		}
 	}
 
-	void Application::Stop()
+	void Application::Shutdown()
 	{
 		// Trigger all system shutdowns
 	}
