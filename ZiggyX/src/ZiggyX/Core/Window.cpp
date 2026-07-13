@@ -51,7 +51,7 @@ namespace ZiggyX
 			m_WindowImpl->m_Specification.Title.c_str(),
 			m_WindowImpl->m_Specification.Width,
 			m_WindowImpl->m_Specification.Height,
-			SDL_WINDOW_FULLSCREEN
+			SDL_WINDOW_RESIZABLE
 		);
 
 		if (m_WindowImpl->m_Window == nullptr)
@@ -74,6 +74,6 @@ namespace ZiggyX
 
 	void Window::OnUpdate()
 	{
-
+		// Implement event handling here
 	}
 }
