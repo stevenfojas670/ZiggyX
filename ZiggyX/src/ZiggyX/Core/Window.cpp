@@ -2,6 +2,8 @@
 #include <SDL3/SDL_init.h>
 #include <SDL3/SDL_video.h>
 #include <SDL3/SDL_log.h>
+#include <SDL3/SDL_events.h>
+#include <iostream>
 
 
 namespace ZiggyX
@@ -74,22 +76,36 @@ namespace ZiggyX
 
 	void Window::OnUpdate()
 	{
-		// Implement event handling here
 		SDL_Event event;
-		while(SDL_POLLEVENT(&event))
+		while (SDL_PollEvent(&event))
 		{
-			switch(event)
+			switch (event.type)
 			{
-				case SDL_KeyboardEvent:
-					// Push an event category with a specific callback to the event system
-					// The dispatcher will dispatch the event and a subscriber will
-					// handle the category with the specific event and do something
+			case SDL_EVENT_WINDOW_RESIZED:
 				break;
-				case SDL_WindowEvent:
+			case SDL_EVENT_WINDOW_MOVED:
 				break;
-				case SDL_MouseButtonEvent:
+			case SDL_EVENT_WINDOW_MINIMIZED:
 				break;
-				case SDL_MouseMotionEvent:
+			case SDL_EVENT_WINDOW_MAXIMIZED:
+				break;
+			case SDL_EVENT_WINDOW_MOUSE_ENTER:
+				break;
+			case SDL_EVENT_WINDOW_MOUSE_LEAVE:
+				break;
+			case SDL_EVENT_KEY_DOWN:
+				std::cout << event.key.key << std::endl;
+				break;
+			case SDL_EVENT_KEY_UP:
+				std::cout << event.key.key << std::endl;
+				break;
+			case SDL_EVENT_MOUSE_MOTION:
+				break;
+			case SDL_EVENT_MOUSE_BUTTON_DOWN:
+				break;
+			case SDL_EVENT_MOUSE_BUTTON_UP:
+				break;
+			case SDL_EVENT_MOUSE_WHEEL:
 				break;
 			}
 		}

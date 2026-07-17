@@ -96,8 +96,6 @@
     <ClInclude Include="src\ZiggyX\Core\Layer.h" />
     <ClInclude Include="src\ZiggyX\Core\Window.h" />
     <ClInclude Include="src\ZiggyX\Events\Event.h" />
-    <ClInclude Include="src\ZiggyX\Events\EventManager.h" />
-    <ClInclude Include="src\ZiggyX\Events\KeyEvent.h" />
     <ClInclude Include="src\ZiggyX\ZiggyX.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

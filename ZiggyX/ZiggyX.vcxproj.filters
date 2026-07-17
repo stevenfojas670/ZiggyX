@@ -29,12 +29,6 @@
     <ClInclude Include="src\ZiggyX\Events\Event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ZiggyX\Events\EventManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ZiggyX\Events\KeyEvent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\ZiggyX\Core\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
