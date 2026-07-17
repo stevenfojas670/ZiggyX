@@ -75,5 +75,23 @@ namespace ZiggyX
 	void Window::OnUpdate()
 	{
 		// Implement event handling here
+		SDL_Event event;
+		while(SDL_POLLEVENT(&event))
+		{
+			switch(event)
+			{
+				case SDL_KeyboardEvent:
+					// Push an event category with a specific callback to the event system
+					// The dispatcher will dispatch the event and a subscriber will
+					// handle the category with the specific event and do something
+				break;
+				case SDL_WindowEvent:
+				break;
+				case SDL_MouseButtonEvent:
+				break;
+				case SDL_MouseMotionEvent:
+				break;
+			}
+		}
 	}
 }
