@@ -21,6 +21,7 @@ namespace ZiggyX
 		m_Running = true;
 		while (m_Running)
 		{
+			m_Window->OnUpdate();
 		}
 	}
 
