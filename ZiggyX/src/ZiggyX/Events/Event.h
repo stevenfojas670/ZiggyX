@@ -8,6 +8,12 @@
 
 namespace ZiggyX
 {
+	enum class EventCategory
+	{
+		KeyEvent,
+		MouseEvent
+	};
+
 	enum class EventType
 	{
 		None = 0,
@@ -28,13 +34,12 @@ namespace ZiggyX
 		virtual std::string ToString() const { return GetName(); }
 	};
 
-	class EventDispatcher
+	class EventManager
 	{
 	public:
-		EventDispatcher(Event& event) : m_Event(event)
-		{
-
-		}
+		EventManager(Event& event);
+		void Subscribe();
+		void Dispatch();
 	private:
 		Event& m_Event;
 	};

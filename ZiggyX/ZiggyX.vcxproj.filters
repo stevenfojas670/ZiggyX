@@ -32,9 +32,6 @@
     <ClInclude Include="src\ZiggyX\Core\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\ZiggyX\Core\Layer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\ZiggyX\Core\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
