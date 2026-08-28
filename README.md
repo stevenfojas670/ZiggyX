@@ -1,5 +1,7 @@
 # ZiggyX
 
+[![CI](https://github.com/stevenfojas670/ZiggyX/actions/workflows/ci.yml/badge.svg)](https://github.com/stevenfojas670/ZiggyX/actions/workflows/ci.yml)
+
 **ZiggyX** is a Windows-only game engine written in C++20, built as a learning project. It pairs the engine
 architecture of [Hazel](https://github.com/TheCherno/Hazel) with the higher-level game systems of
 *Game Coding Complete, 4th Edition*.
