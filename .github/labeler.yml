@@ -1,0 +1,75 @@
+# Path-based auto-labelling for pull requests (actions/labeler v5 syntax).
+# Globs are forward-looking: some areas (Renderer, Platform, Physics, ...) do not exist yet.
+
+"area:core":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "ZiggyX/src/ZiggyX/Core/**"
+
+"area:events":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "ZiggyX/src/ZiggyX/Events/**"
+
+"area:renderer":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Renderer/**"
+          - "**/DirectX/**"
+          - "**/*.hlsl"
+
+"area:platform":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Platform/**"
+
+"area:input":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Input*"
+          - "**/KeyCodes*"
+          - "**/MouseCodes*"
+
+"area:physics":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Physics/**"
+
+"area:process":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Process*"
+
+"area:actors":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Actor*"
+          - "**/*Component*"
+
+"area:resources":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Resource*"
+          - "**/ResCache*"
+
+"area:scripting":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/Script*"
+          - "**/*.lua"
+
+"area:ai":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/AI/**"
+          - "**/Pathfind*"
+
+"area:ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+
+"area:docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
