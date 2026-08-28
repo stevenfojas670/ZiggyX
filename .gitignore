@@ -362,3 +362,18 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+###############################################################################
+# Vendored dependency binaries
+#
+# The blanket `x64/` build-output rule above also swallows
+# Dependencies/**/lib/x64/, which is where the vendored SDL3 import library
+# lives. Those are checked-in dependencies, not build output, so re-include the
+# directory and the two files the build actually needs (SDL3.lib to link,
+# SDL3.dll for Sandbox's post-build xcopy). Everything else in there -- the
+# 14 MB SDL3.pdb, SDL3_test.lib -- stays ignored.
+###############################################################################
+!Dependencies/**/lib/x64/
+Dependencies/**/lib/x64/*
+!Dependencies/**/lib/x64/SDL3.lib
+!Dependencies/**/lib/x64/SDL3.dll
