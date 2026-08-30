@@ -1,12 +1,6 @@
 <Solution>
   <Configurations>
     <Platform Name="x64" />
-    <Platform Name="x86" />
   </Configurations>
-  <Project Path="Sandbox/Sandbox.vcxproj" Id="2c7d5b88-1ffd-4241-ae52-3d992daefa2d">
-    <Build Solution="*|x86" Project="false" />
-  </Project>
-  <Project Path="ZiggyX/ZiggyX.vcxproj" Id="4743653d-fdf8-4c61-bf80-12c6341d9fa9">
-    <Build Solution="*|x86" Project="false" />
-  </Project>
+  <Project Path="ZiggyX/ZiggyX.vcxproj" Id="4743653d-fdf8-4c61-bf80-12c6341d9fa9" />
 </Solution>

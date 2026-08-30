@@ -1,4 +1,4 @@
-#include "ZiggyX/Core/Window.h"
+#include "Window.h"
 #include <SDL3/SDL_init.h>
 #include <SDL3/SDL_video.h>
 #include <SDL3/SDL_log.h>
@@ -29,6 +29,8 @@ namespace ZiggyX
 	uint32_t Window::GetWidth() const { return m_WindowImpl->m_Specification.Width; }
 
 	uint32_t Window::GetHeight() const { return m_WindowImpl->m_Specification.Height; }
+
+	bool Window::ShouldClose() const { return m_WindowImpl->done; }
 
 	void Window::Startup(const WindowSpecification& specs)
 	{
@@ -81,6 +83,10 @@ namespace ZiggyX
 		{
 			switch (event.type)
 			{
+			case SDL_EVENT_QUIT:
+			case SDL_EVENT_WINDOW_CLOSE_REQUESTED:
+				m_WindowImpl->done = true;
+				break;
 			case SDL_EVENT_WINDOW_RESIZED:
 				break;
 			case SDL_EVENT_WINDOW_MOVED:

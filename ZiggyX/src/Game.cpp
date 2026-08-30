@@ -1,31 +1,31 @@
-#include "Application.h"
+#include "Game.h"
 
 namespace ZiggyX
 {
-	Application* Application::s_Instance = nullptr;
+	Game* Game::s_Instance = nullptr;
 
-	Application::Application()
+	Game::Game()
 	{
 		// Initialize the window
 		// Make this customizable later
 		m_Window = std::make_unique<Window>();
 	}
 
-	Application::~Application()
+	Game::~Game()
 	{
 
 	}
 
-	void Application::Start()
+	void Game::Start()
 	{
 		m_Running = true;
-		while (m_Running)
+		while (m_Running && !m_Window->ShouldClose())
 		{
 			m_Window->OnUpdate();
 		}
 	}
 
-	void Application::Shutdown()
+	void Game::Shutdown()
 	{
 		// Trigger all system shutdowns
 	}
