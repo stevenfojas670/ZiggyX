@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ZiggyX/Events/Event.h"
+#include "Events/Event.h"
 #include <string>
 #include <memory>
 
@@ -22,6 +22,7 @@ namespace ZiggyX
 		void OnUpdate();
 		uint32_t GetWidth() const;
 		uint32_t GetHeight() const;
+		bool ShouldClose() const;
 
 	private:
 		void Startup(const WindowSpecification& specs);
